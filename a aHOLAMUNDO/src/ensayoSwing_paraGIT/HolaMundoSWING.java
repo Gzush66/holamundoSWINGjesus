@@ -33,15 +33,15 @@ public class HolaMundoSWING extends JFrame implements ActionListener {
 	public HolaMundoSWING() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(300, 300);
-
+		panelPrincipal.setBackground(Color.GREEN);
 		panelPrincipal = new JPanel();
 		panelPrincipal.setLayout(new BorderLayout());
 
-		btnIncrementar1 = new JButton("Incrementar 1");
+		btnIncrementar1 = new JButton("Hola");
 		panelPrincipal.add(btnIncrementar1, BorderLayout.SOUTH);
 		btnIncrementar1.addActionListener(this);
 
-		btnIncrementar10 = new JButton("Incrementar 10");
+		btnIncrementar10 = new JButton("Mundo");
 		panelPrincipal.add(btnIncrementar10, BorderLayout.NORTH);
 		btnIncrementar10.addActionListener(this);
 
@@ -70,7 +70,7 @@ public class HolaMundoSWING extends JFrame implements ActionListener {
 		cmbBox = new JComboBox<>();
 		panelPrincipal.add(cmbBox, BorderLayout.EAST);
 
-		String[] opciones = new String[] { "opción1", "opción2", "opción3" };
+		String[] opciones = new String[] { "Hola", "Mundo", "Swing" };
 		for (String opcion : opciones) {
 			cmbBox.addItem(opcion);
 		}
@@ -90,10 +90,10 @@ public class HolaMundoSWING extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 
 		switch (e.getActionCommand()) {
-		case "Incrementar 1":
+		case "Hola":
 			gestionarPulsacionBotonIncrementar1();
 			break;
-		case "Incrementar 10":
+		case "Mundo":
 			gestionarPulsacionBotonIncrementar10();
 			break;
 		case "Activar botones":
